@@ -5,18 +5,43 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <style>
-    body {
-      text-align: center;
+  <style>    
+    * {
+      box-sizing: border-box;
+    }
+
+    body {      
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     canvas {
-      border: solid 1px black;
+      border: solid 5px black;
+    }
+
+    #game-menu {
+      display: flex;
+      justify-content: space-between;
+      width: 600px;    
+      margin-bottom: 5px;
     }
   </style>
 </head>
-<body>
-  <canvas id="canvas" width="600" height="405"></canvas>
+<body>  
+  <h1>Snake Game</h1>
+  <div id="game-container">
+    <div id="game-menu">
+      <div>
+        <button id="btnPlay">Play</button>
+        <button id="btnRestart" hidden>Restart</button>
+        <button id="btnPause">Pause</button>
+        <button id="btnResume" hidden>Resume</button>
+      </div>
+      <div>
+        Score: <span id="score">0</span>
+      </div>
+    </div> 
+    <canvas id="canvas" width="600" height="405"></canvas>
+  </div>
   <script src="main.js" type="module"></script>
 </body>
 </html>
